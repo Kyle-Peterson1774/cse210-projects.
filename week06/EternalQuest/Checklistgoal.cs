@@ -1,5 +1,5 @@
 using System;
-
+//updated
 public class ChecklistGoal : Goal
 {
     private int _amountCompleted;
