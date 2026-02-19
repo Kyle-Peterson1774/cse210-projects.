@@ -12,9 +12,18 @@ public class Swimming : Activity
 
     public override double GetDistance()
     {
-        double meters = _laps * 50.0;
-        double km = meters / 1000.0;
-        double miles = km * 0.621371;
+        double km = (_laps * 50.0) / 1000.0;
+        double miles = km * 0.62;
         return miles;
+    }
+
+    public override double GetSpeed()
+    {
+        return (GetDistance() / GetMinutes()) * 60.0;
+    }
+
+    public override double GetPace()
+    {
+        return GetMinutes() / GetDistance();
     }
 }
